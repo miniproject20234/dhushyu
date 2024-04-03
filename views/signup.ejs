@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="/style1.css">
+</head>
+<body>
+    
+<div class="box-form">
+    <div class="left">
+        <div class="overlay">
+            <h1>KVCET</h1>
+        </div>
+    </div>
+        
+    <div class="right">
+        <h1><b> Registration </b></h1>
+        <div class="inputs">
+            <form action="/signup" method="post" onsubmit="return validateForm()">
+                <input type="text" name="username" placeholder="Student Name" required autocomplete="off">
+                <br>
+                <input type="number" name="password" id="regNumber" placeholder="Register Number" required>
+                <br>
+                <input type="text" name="dept" placeholder="Department">
+                <br>
+                <input type="text" name="year" placeholder="Year">
+                <br>
+                <br>
+                <br>
+                <button type="submit" onclick="" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    function validateForm() {
+        var regNumber = document.getElementById("regNumber").value;
+        if (regNumber.length !== 12) {
+            alert("Register number must be 12 characters long.");
+            return false;
+        }
+        return true;
+    }
+    
+       
+</script>
+</html>
