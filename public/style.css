@@ -12,17 +12,25 @@
 
 .kvcet img{
     position: fixed;
+    margin:5px;
+    margin-left:15px;
+    width:150px;
+    padding:px
 }
 .container{
-    background:linear-gradient(45deg, blueviolet, lightgreen);
-    padding:15px 5%;
-    padding-bottom: 100px;
+    background-image: linear-gradient(45deg, #efefef 25%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 75%, #efefef), linear-gradient(45deg, #efefef 25%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 75%, #efefef);
+    background-image:url('https://i.pinimg.com/736x/91/8c/78/918c78f638c758e24e780b0dc34c880a.jpg') ;
+    background-size: cover;
+    justify-content: center;
+    min-height: fit-content;
+    min-width: fit-content;
+
 }
 
 .container .heading{
     text-align: center;
     padding-bottom: 15px;
-    color:#fff;
+    color:#2e3030;
     text-shadow: 0 5px 10px rgba(0,0,0,.2);
     font-size: 50px;
 }
@@ -35,7 +43,7 @@
 
 }
 .container2{
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .container .box-container{
@@ -52,31 +60,39 @@
     padding:30px 10px;
 }
 .box{
-    margin-left: 350px;
+    margin-left: 340px;
     margin-right: 350px;
 }
-.container .box-container .box1 img{
+ .box1 img{
     height: 450px;
-    width: 350px;
+    width: 340px;
     display: flex;
     justify-content: space-between;
-    padding-right: 40px;
+    padding-right: 30px;
+    padding-left: 20px;
+    padding-top: 50px;
+    position: fixed;
+    
+    
 
 }
 .container .box-container .kvcet  img{
     display: flex;
     justify-content: center;
-    padding-left: 50px;
+    padding-left: 800px;
     padding-top: 80px;
+    
 }
 
-.container .box-container .box2 img{
-    height: 450px;
-    width: px;
-    padding-left: 678px;
-    /* position: fixed; */
-
+ .box2 img {
+    height: 400px;
+    width: px; /* You should specify the width, for example, width: auto; */
+    margin-top: 50px;
+    position: fixed;
+    margin-left: 950px;
+    z-index: -1; /* This will push the image back */
 }
+
 .container .box-container .box img{
     display: block;
     margin-left: auto;margin-right: auto;
@@ -96,7 +112,7 @@
     line-height: 1.8;
 }
 
-.container .box-container .box .btn{
+.box-container .box .btn{
     margin-top: 10px;
     display: inline-block;
     background:#333;
@@ -104,15 +120,15 @@
     font-size: 17px;
     border-radius: 5px;
     padding: 8px 25px;
+    cursor:grab;
 }
-
-.container .box-container .box .btn:hover{
+.box .btn:hover{
     letter-spacing: 1px;
 }
 
 .container .box-container .box:hover{
     box-shadow: 0 10px 15px rgba(0,0,0,.3);
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 @media (max-width:768px){

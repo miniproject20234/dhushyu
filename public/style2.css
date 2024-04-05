@@ -6,8 +6,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+
+
 body {
-    background-image: url("https://kveg.in/wp-content/uploads/2021/03/gallery-img-11.jpg");
+    background-image: url("/images/WhatsApp Image 2024-04-04 at 11.59.21 AM.jpeg");
     width: 100%;
     height: 100vh;
     display: flex;
@@ -16,6 +18,7 @@ body {
     background-size: cover;
     
 }
+
 
 ::selection {
     color: #fff;
@@ -29,6 +32,9 @@ body {
     border-radius: 5px;
     text-align: center;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+.wrapper:hover{
+    transform: scale(1.03);
 }
 
 .wrapper header {

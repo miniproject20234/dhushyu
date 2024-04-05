@@ -4,70 +4,135 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/icon.jpg" type="image/png">
     <title>Voting page</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="icon" href="./images/icon2.jpg">
 </head>
 <body>
+    <div class="container">
+        <div class="kvcet">
+            <img src="/images/logo.png">
+            <center><h1 class="heading">Election Candidates</h1></center>
+        </div>
+        
+        <div class="box-container">
+            <div class="hold_img">
+                <div class="box1">
+                    <img src="/images/Karpaga (1).png">
+                </div>
+                <div class="box2">
+                    <img src="/images/Purple and Blue, Illustrative, Vote Campaign Posters.png">
+                </div>
+            </div>
+            <form action="/signup">
+            <div class="container2">
+                <div class="box">
+                    <img src="/images/mad.png">
+                    <h1  >  <input style="font-size: large; text-align: center;" type="text" name="name1" value="DR.C.Jayapratha"></h1>
+                    <h4>Moblie Application Development</h4>
+                    <button type="submit" id="click1" onclick="incrementCounter('click1')" class="btn">vote</button>
+                    
+                </div><br><br>
+                <div class="box">
+                    <img src="/images/adt.jpg">
+                    <h3>DR.A.B.Hajira Be</h3>
+                    <h4>Advanced Database Technology</h4>
+                    <button type="button" id="click2" onclick="incrementCounter('click2')" class="btn">vote</button>
+                    
+                </div><br><br>
+                <div class="box">
+                    <img src="/images/software.png">
+                    <h3>MR.R.Ramasamy</h3>
+                    <h4>Software Application Maintenance</h4>
+                    <button type="submit" id="click3" onclick="incrementCounter('click3')" class="btn">vote</button>
+                    
+                </div><br><br>
+                <div class="box">
+                    <img src="/images/fullstack.jpg">
+                    <h3>MR.Syed Raffi Ahamed</h3>
+                    <h4>Fullstack Web Development</h4>
+                    <button type="button" id="click4" onclick="incrementCounter('click4')" class="btn">vote</button>
+                    
+                </div><br><br>
+                <div class="box">
+                    <img src="/images/cloud.jpg">
+                    <h3>Mrs.J.Uma</h3>
+                    <h4>Cloud Computing Technology</h4>
+                    <button type="button" id="click5" onclick="incrementCounter('click5')" class="btn">vote</button>
+                    
+                </div><br><br>
+                <div class="box">
+                    <img src="/images/cyber.jpg">
+                    <h3>Mrs.Bhuvaneshwari</h3>
+                    <h4>Cyber Security</h4>
+                    <button type="button" id="click6" onclick="incrementCounter('click6')" class="btn">vote</button>
+                    
+                </div><br><br>
+            </div>
+        </form>
+        </div>
     
-<div class="container">
-    <div class="kvcet">
-        <img src="./images/logo.png">
-
     </div>
-    <h1 class="heading">CANDIDATES</h1>
-
-    <div class="box-container">
-        <div class="hold_img">
-        <div class="box1">
-            <img src="./images/Karpaga (1).png">
-        </div>
-       
-        <div class="box2">
-            <img src="Purple and Blue, Illustrative, Vote Campaign Posters.png">
-        </div>
-    </div>
-    <div class="container2">
-        <div class="box">
-            <img src="./images/mad.png">
-            <h3>DR.C.Jayapratha</h3>
-            <h4>Moblie Application Development</h4>
-            <button id=""  class="btn"> VOTE</button>
-        </div><br><br>
-        <div class="box">
-            <img src="./images/adt.jpg">
-            <h3>DR.A.B.Hajira Be</h3>
-            <h4>Advanced Database Technology</h4>
-            <button id="" class="btn"> VOTE</button>
-        </div><br><br>
-        <div class="box">
-            <img src="./images/software.png">
-             <h3>MR.R.Ramasamy</h3>
-             <h4>Software Application Maintance</h4>
-             <button id="" class="btn"> VOTE</button>
-        </div><br><br>
-        <div class="box">
-            <img src="./images/fullstack.jpg">
-            <h3>MR.Syed Raffi Ahamed</h3>
-            <h4>Fullstack Web Development</h4>
-            <button id="" class="btn"> VOTE</button>
-        </div><br><br>
-        <div class="box">
-            <img src="./images/cloud.jpg">
-             <h3>Mrs.J.Uma</h3>
-             <h4>Cloud Computing Technology</h4>
-             <button id="" class="btn"> VOTE</button>
-        </div><br><br>
-        <div class="box">
-            <img src="./images/cyber.jpg">
-            <h3>Mrs.Bhuvaneshwari</h3>
-            <h4>Cyber Security</h4>
-            <button id="" class="btn"> VOTE</button>
-        </div><br><br>
-    </div>
-    </div>
-
-</div>
-
+    <script type="text/javascript">
+        // Initialize the counter variables
+        var click1 = 0;
+        var click2 = 0;
+        var click3 = 0;
+        var click4 = 0;
+        var click5 = 0;
+        var click6 = 0;
+    
+        // Function to increment the counter and update the display
+        function incrementCounter(clickId) {
+            switch (clickId) {
+                case 'click1':
+                    click1++;
+                    
+                    console.log( click1);
+                    alert("your vote is successfully sumited");
+                    window.location.href = '/signup';
+                    break;
+                case 'click2':
+                    click2++;
+                    
+                    console.log( click2);
+                    alert("your vote is successfully sumited");
+                    window.location.href = '/signup';
+                    break;
+                case 'click3':
+                    click3++;
+                    
+                    console.log( click3);
+                    alert("your vote is successfully sumited");
+                    window.location.href = '/signup';
+                    break;
+                case 'click4':
+                    click4++;
+                    
+                    console.log( click4);
+                    alert("your vote is successfully sumited");
+                    window.location.href = '/signup';
+                    break;
+                case 'click5':
+                    click5++;
+                    
+                    console.log(click5);
+                    alert("your vote is successfully sumited");
+                    window.location.href = '/signup';
+                    break;
+                case 'click6':
+                    click6++;
+                    console.log( click6);
+                    alert("your vote is successfully sumited");
+                    window.location.href = '/signup';
+                    break;
+                default:
+                    break;
+            }
+            
+        }
+    </script>
+    
+    
 </body>
 </html>

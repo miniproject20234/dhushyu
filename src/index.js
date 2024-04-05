@@ -1,15 +1,17 @@
 //index.js file
 
 const express = require("express");
+const bodyParser = require('body-parser');
+
 const path = require("path");
 const collection = require("./config");
 const bcrypt = require('bcrypt');
-const Votes = require('./config');
 
-    // Create a new instance of Votes model with data
-    
+var mongoose = require("mongoose");
+
 
 const app = express();
+app.use(bodyParser.json());
 // convert data into json format
 app.use(express.json());
 // Static file
@@ -31,9 +33,12 @@ app.get("/login", (req, res) => {
 app.get("/signup", (req, res) => {
     res.render("signup");
 });
+
 app.get("/votepage", (req, res) => {
     res.render("votepage");
 });
+
+
 
 // Register User
 app.post("/signup", async (req, res) => {
@@ -53,7 +58,11 @@ app.post("/signup", async (req, res) => {
     if (existingUser) {
         res.send("<script>alert('User already exists. Please choose a different username.')</script>"  );
         
-    } else {
+        window.location.href = './signup';
+        res.redirect('./signup');
+    }
+    
+    else {
         // Hash the password using bcrypt
         const saltRounds = 10; // Number of salt rounds for bcrypt
         const hashedPassword = await bcrypt.hash(data.password, saltRounds);
@@ -92,7 +101,9 @@ app.post("/login", async (req, res) => {
 
 
 // Define Port for Application
-const port = 5001;
+const port = 5000;
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`)
 });
+app.use(bodyParser.json());
+const dbName = 'login-users';

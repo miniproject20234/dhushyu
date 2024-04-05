@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
     <link rel="stylesheet" href="/style1.css">
+    <link rel="icon" href="/images/icon.jpg" type="image/png">
 </head>
 <body>
     
@@ -21,7 +22,7 @@
             <form action="/signup" method="post" onsubmit="return validateForm()">
                 <input type="text" name="username" placeholder="Student Name" required autocomplete="off">
                 <br>
-                <input type="number" name="password" id="regNumber" placeholder="Register Number" required>
+                <input type="number" name="password" id="regNumber" placeholder="Register Number" maxlength="12" minlength="12" required>
                 <br>
                 <input type="text" name="dept" placeholder="Department">
                 <br>
